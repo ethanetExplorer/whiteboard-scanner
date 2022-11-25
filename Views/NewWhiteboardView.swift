@@ -36,6 +36,7 @@ struct NewWhiteboardView: View {
 //                        whiteboards.append(Whiteboard(title: whiteboardTitle, description: whiteboardDesc, imageData: outputImage.imgData))
                         whiteboardManager.whiteboards.append(Whiteboard(title: whiteboardTitle, description: whiteboardDesc, dateCreated: Date.now.formatted(date: .long, time: .shortened), imageData: outputImage.imgData))
                         presentationMode.wrappedValue.dismiss()
+                        print("\(whiteboardManager)")
                     }
                 }
             }
@@ -43,9 +44,9 @@ struct NewWhiteboardView: View {
         }
     }
 }
-
+//
 //struct NewWhiteboardView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        NewWhiteboardView(whiteboards: .constant([]))
+//        NewWhiteboardView(whiteboardDesc: .constant([]))
 //    }
 //}
